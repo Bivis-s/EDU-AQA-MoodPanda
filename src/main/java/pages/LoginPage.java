@@ -8,8 +8,8 @@ import java.time.Duration;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class LoginPage {
-    public static final String LOGIN_PAGE_URL = "https://moodpanda.com/Login/";
+public class LoginPage extends AbstractPage {
+    protected static final String LOGIN_PAGE_URL = URL + "Login/";
     private final String GOOGLE_PLAY_ICON_CSS = "[alt = 'MoodPanda Android App on Google Play']";
     private final String EMAIL_INPUT_CSS = "#ContentPlaceHolderContent_TextBoxEmail";
     private final String PASSWORD_INPUT_CSS = "#ContentPlaceHolderContent_TextBoxPassword";
