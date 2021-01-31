@@ -1,6 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 
 import java.time.Duration;
 
@@ -14,11 +15,13 @@ public class LoginPage {
     private final String PASSWORD_INPUT_CSS = "#ContentPlaceHolderContent_TextBoxPassword";
     private final String LOGIN_BUTTON_CSS = "#ContentPlaceHolderContent_ButtonLogin";
 
+    @Step("Open login page")
     public LoginPage openPage() {
         open(LOGIN_PAGE_URL);
         return this.waitForPageOpened();
     }
 
+    @Step("Login in Mood Panda")
     public FeedPage login(String email, String password) {
         $(EMAIL_INPUT_CSS).sendKeys(email);
         $(PASSWORD_INPUT_CSS).sendKeys(password);
