@@ -1,4 +1,4 @@
-package tests.before_test;
+package tests.base_test;
 
 import com.codeborne.selenide.Screenshots;
 import io.qameta.allure.Attachment;

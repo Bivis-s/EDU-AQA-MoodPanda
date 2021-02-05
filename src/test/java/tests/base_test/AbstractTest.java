@@ -1,4 +1,4 @@
-package tests.before_test;
+package tests.base_test;
 
 import com.codeborne.selenide.Configuration;
 import org.testng.ITestContext;
@@ -11,7 +11,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 @Listeners({ScreenshotTestListener.class})
 public abstract class AbstractTest {
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeMethod
     public void setup(ITestContext context) {
         Configuration.browser = "chrome";
         Configuration.startMaximized = true;

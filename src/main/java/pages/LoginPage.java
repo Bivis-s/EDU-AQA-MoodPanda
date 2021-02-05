@@ -33,5 +33,4 @@ public class LoginPage extends AbstractPage {
         $(GOOGLE_PLAY_ICON_CSS).shouldBe(Condition.visible, Duration.ofSeconds(10));
         return this;
     }
-
 }

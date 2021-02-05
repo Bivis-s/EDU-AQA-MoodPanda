@@ -1,4 +1,4 @@
-package tests.before_test;
+package tests.base_test;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

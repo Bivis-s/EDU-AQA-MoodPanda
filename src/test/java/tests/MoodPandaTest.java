@@ -5,8 +5,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.FeedPage;
 import pages.LoginPage;
-import tests.before_test.AbstractTest;
-import tests.before_test.RetryAnalyzer;
+import tests.base_test.AbstractTest;
+import tests.base_test.RetryAnalyzer;
 
 import static tests.MoodPandaValues.*;
 
@@ -16,13 +16,6 @@ public class MoodPandaTest extends AbstractTest {
     @BeforeMethod(alwaysRun = true)
     public void initPage() {
         loginPage = new LoginPage();
-    }
-
-    @Test(description = "Login via valid data test")
-    public void loginTest() {
-        loginPage
-                .openPage()
-                .login(EMAIL, PASSWORD);
     }
 
     @Test(description = "Send post with mood test", dataProvider = "moodData",
@@ -51,7 +44,7 @@ public class MoodPandaTest extends AbstractTest {
         Assert.assertEquals(feedPage.getDescriptionFromLastUserPost(USERNAME), description);
     }
 
-    @Test(description = "Send post with description test", dataProvider = "dateData",
+    @Test(description = "Send post with date test", dataProvider = "dateData",
             dataProviderClass = MoodPandaValues.class, retryAnalyzer = RetryAnalyzer.class)
     public void sendPostWithDateTest(String date, String expectedDateTime) {
         FeedPage feedPage = loginPage
