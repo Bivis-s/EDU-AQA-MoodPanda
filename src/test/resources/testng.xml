@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MoodPanda test">
+    <test name="MoodPanda test">
+        <classes>
+            <class name="tests.MoodPandaTest"/>
+        </classes>
+    </test>
+</suite>
