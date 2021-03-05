@@ -2,12 +2,9 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/openjdk:8
+      - image: circleci/openjdk:8-browsers
     steps:
       - checkout
-      - run:
-          name: Get chrome version
-          command: google-chrome --version
       - run:
           name: Clean and install
           command: mvn clean install
